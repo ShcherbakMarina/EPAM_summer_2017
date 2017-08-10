@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-2.7.0/jasmine_favicon.png">
+     <link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-2.7.0/jasmine.css">
+
+     <script type="text/javascript" src="jasmine/lib/jasmine-2.7.0/jasmine.js"></script>
+     <script type="text/javascript" src="jasmine/lib/jasmine-2.7.0/jasmine-html.js"></script>
+     <script type="text/javascript" src="jasmine/lib/jasmine-2.7.0/boot.js"></script>
+    
+    <script type="text/javascript" src="blanket/blanket.min.js" data-cover-only="js/"  data-cover-adapter="blanket/jasmine-2.x-blanket.js"></script>
+
+     <script type="text/javascript" src="js/script.js" ></script>
+  </head>
+  <body>
+    <script>
+      describe('findMaxSubstr', function () {
+        it('should return "" for ""', function () {
+          expect(findMaxSubstr('')).toEqual('');
+        });
+        
+        it('should return "a" for "aaaaaa"', function () {
+          expect(findMaxSubstr('aaaaaa')).toEqual('a');
+        });
+        
+        it('should return " ab" for " a ab "', function () {
+          expect(findMaxSubstr(' a ab ')).toEqual(' ab');
+        });
+        
+        it('should return "cdefgnvb" for "abccdefgnvbc"', function () {
+          expect(findMaxSubstr('abccdefgnvbc')).toEqual('cdefgnvb');
+        });
+        
+        it('should return "234" for "1223445"', function () {
+          expect(findMaxSubstr('1223445')).toEqual('234');
+        });
+        
+        it('should return ",:@#$%" for ",:@#$%%^"', function () {
+          expect(findMaxSubstr(',:@#$%%^')).toEqual(',:@#$%');
+        });
+
+      });
+    </script>
+  </body>
+</html>
