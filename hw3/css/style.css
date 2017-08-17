@@ -1,0 +1,37 @@
+.blink {
+  animation: blinkOne 1s linear infinite;
+}
+
+@keyframes blinkOne {
+  0% {opacity: 1; background-color: rgb(34, 34, 34);}
+  100% {opacity: 0; background-color: rgba(34, 34, 34, 0);}
+}
+
+* {
+  margin: 20px;
+}
+
+ul {
+  background-color: #fcf8f6;
+}
+
+ol {
+  background-color: #0cb08b;
+}
+
+ul li,
+ol li {
+  background-color: #e6e6fa;
+}
+
+.first {
+  background-color: #d3ffce;
+}
+
+.second {
+  background-color: #b1ee97;
+}
+
+.second p {
+  background-color: #7fffd4;
+}
