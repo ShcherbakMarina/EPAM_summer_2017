@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-2.7.0/jasmine_favicon.png">
+     <link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-2.7.0/jasmine.css">
+
+     <script type="text/javascript" src="jasmine/lib/jasmine-2.7.0/jasmine.js"></script>
+     <script type="text/javascript" src="jasmine/lib/jasmine-2.7.0/jasmine-html.js"></script>
+     <script type="text/javascript" src="jasmine/lib/jasmine-2.7.0/boot.js"></script>
+
+     <script type="text/javascript" src="js/script.js" ></script>
+  </head>
+  <body>
+    <script>
+      describe('checkPin', function () {
+        var first = checkPin(1111, 4);
+        var second = checkPin(2222, 3);
+        it('should return "true" for "1111" when real pin is "1111"', function () {
+          expect(first(1111)).toEqual(true);
+        });
+        it('should return "false" for "1111" when real pin is "2222"', function () {
+          expect(second(1111)).toEqual(false);
+        });
+        it('should return "false" for "1111" when real pin is "2222"', function () {
+          expect(second(1111)).toEqual(false);
+        });
+        it('should return "false" for "1111" when real pin is "2222"', function () {
+          expect(second(1111)).toEqual(false);
+        });
+        it('should return "true" for "2222" when real pin is "2222"', function () {
+          expect(second(2222)).toEqual(false);
+        });
+      });
+    </script>
+  </body>
+</html>
