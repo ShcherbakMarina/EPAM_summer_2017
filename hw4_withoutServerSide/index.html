@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div>
+      <h1>Simple test</h1>
+      <div class="wrapper">
+        <div data-type="singleChoice" answer="MQ==" class="active"><!--1-->
+          <p>Multiply 10 by 2.</p>
+          <div data-option="1">
+            <input type="radio" name="age" value="20" id="small"><label for="small">20</label><br>
+          </div>
+          <div data-option="2">
+            <input type="radio" name="age" value="40" id="medium"><label for="medium">40</label><br>
+          </div>
+          <div data-option="3">
+            <input type="radio" name="age" value="90" id="large"><label for="large">90</label>
+          </div>
+          <button onclick="shift(this);">Next</button>
+        </div>
+        <div data-type="multipleChoice" answer="MSwzLDU=" class><!--1,3,5-->
+          <p>Choose films in which Sylvester Stallone was starred.</p>
+          <div data-option="1">
+            <input type="checkbox" id="rocky"><label for="rocky">Rocky</label>
+          </div>
+          <div data-option="2">
+            <input type="checkbox" id="titanic"><label for="titanic">Titanic</label>
+          </div>
+          <div data-option="3">
+            <input type="checkbox" id="rockyI"><label for="rockyI">Rocky I</label>
+          </div>
+          <div data-option="4">
+            <input type="checkbox" id="arrival"><label for="arrival">Arrival</label>
+          </div>
+          <div data-option="5">
+            <input type="checkbox" id="rockyII"><label for="rockyII">Rocky II</label>
+          </div>
+          <button onclick="shift(this);">Next</button>
+        </div>
+        <div data-type="singleChoice" answer="Mg==" class>
+          <p>What is the first name of the famous wizard Potter?</p>
+          <div data-option="1">
+            <input type="radio" name="name" value="Martin" id="martin"><label for="martin">Martin</label><br>
+          </div>
+          <div data-option="2">
+            <input type="radio" name="name" value="Harry" id="harry"><label for="harry">Harry</label><br>
+          </div>
+          <div data-option="3">
+            <input type="radio" name="name" value="Gregor" id="gregor"><label for="gregor">Gregor</label>
+          </div>
+          <button onclick="shift(this);">Next</button>
+        </div>
+        <div data-type="matchingQuestion" answer="MTp2ZWdldGFibGUsMjpmcnVpdCwzOmJlcnJ5" class><!--1:vegetable,2:fruit,3:berry-->
+          <p>Choose the right type for each plant.</p>
+          <!-- <div data-match> -->
+            <div data-option="1">
+              <span>Potato</span>
+              <select>
+                <option disabled>Choose type</option>
+                <option value="vegetable">vegetable</option>
+                <option value="fruit">fruit</option>
+                <option value="berry">berry</option>
+              </select>
+            </div>
+            <div data-option="2">
+              <span>Orange</span>
+              <select>
+                <option disabled>Choose type</option>
+                <option value="vegetable">vegetable</option>
+                <option value="fruit">fruit</option>
+                <option value="berry">berry</option>
+              </select>
+            </div>
+            <div data-option="3">
+              <span>Watermelon</span>
+              <select>
+                <option disabled>Choose type</option>
+                <option value="vegetable">vegetable</option>
+                <option value="fruit">fruit</option>
+                <option value="berry">berry</option>
+              </select>
+            </div>
+          <!-- </div> -->
+          <button onclick="shift(this);">Next</button>
+          </div>
+          <div data-type="openQuestion" answer="TWljaGFlbCBTY290dA==" class>
+            <p>What is the name of the main character in tv series "Office" (american version)?</p>
+            <span>Type name here: </span><input type="text">
+            <button onclick="shift(this);">Next</button>
+          </div>
+          <div>
+            <p>Results</p>
+            <button onclick="getResults(this);">Get results</button>
+            <button onclick="retest();" id="retest">Retest</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/base64.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
