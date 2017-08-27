@@ -760,7 +760,16 @@ header {
   }
 
   header {
+    position: relative;
+    z-index: 100;
     height: 70px;
+  }
+  main,
+  main div,
+  main ul,
+  main li,
+  main img {
+    position: static;
   }
 
   header .wrapper {
@@ -785,7 +794,6 @@ header {
     display: block;
   }
 
-
   .logo,
   .mainMenu,
   .signUp,
@@ -794,13 +802,11 @@ header {
   }
 
   .mobileMenu:hover ~ .mainMenu {
-    display: block;
-    position: absolute;
-    top: 0;
+    /*display: block;*/
   }
 
   .mobileMenu:hover {
-    background-image: url('../img/menuIconClose.png');
+    /*background-image: url('../img/menuIconClose.png');*/
   }
 
   .sliderDots {

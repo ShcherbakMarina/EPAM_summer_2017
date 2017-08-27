@@ -98,3 +98,26 @@ function changePromo() {
 }
 
 window.onresize = changePromo;
+
+
+
+
+//menu for mobile
+function toggleMenu() {
+  var menuButton = document.getElementsByClassName('mobileMenu')[0];
+  var menuState = menuButton.getAttribute('data-state');
+  var header = document.getElementsByTagName('header')[0];
+  var menu = header.getElementsByClassName('mainMenu')[0];
+  console.log(header);
+  if (menuState == 'closed') {
+    menuButton.style.backgroundImage = "url('img/menuIconClose.png')";
+    menuState = menuButton.setAttribute('data-state', 'opened');
+    header.style.height = '270px';
+    menu.style.display = 'block';
+  } else if (menuState == 'opened') {
+    menuButton.style.backgroundImage = "url('img/menuIcon.png')";
+    menuState = menuButton.setAttribute('data-state', 'closed');
+    header.style.height = '70px';
+    menu.style.display = 'none';
+  }
+}
