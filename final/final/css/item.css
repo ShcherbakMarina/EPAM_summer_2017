@@ -1,0 +1,147 @@
+.backToCatalog {
+  height: 64px;
+  margin-bottom: 4.6%;
+  line-height: 64px;
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.backToCatalog .wrapper {
+  overflow: hidden;
+}
+
+.backToCatalog p {
+  margin: 0;
+}
+
+.item .wrapper {
+  display: flex;
+}
+
+.item .wrapper>div {
+  width: 50%;
+}
+
+.itemPhotos img {
+  width: 100%;
+  margin-bottom: -3px;
+}
+
+.item .wrapper .thumbs {
+  display: flex;
+  width: 100%;
+}
+.thumbs div {
+  width: 33.33%;
+}
+
+.itemInfo {
+  padding-left: 4%;
+}
+
+.name {
+  margin: 3.5% 0 2%;
+  font-size: 1.75em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.description {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.85em;
+  font-family: Times, serif;
+  font-style: italic;
+}
+
+.price {
+  margin: 7.3% 0 8.4%;
+  font-size: 1.6em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.size,
+.color {
+  margin: 3.7% 0;
+  font-size: 0.78em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.size span,
+.color span {
+  display: inline-block;
+  width: 10.5%;
+}
+
+.itemInfo input {
+  visibility:hidden;
+}
+label {
+  display: inline-block;
+  width: 78px;
+  height: 38px;
+  margin-right: 2%;
+  text-align: center;
+  line-height: 38px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+input:checked + label {
+  border-color: #e5e5e5;
+}
+
+.addToBag {
+  margin-top: 9%;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 650px) and (max-width: 1024px) {
+  .item .wrapper {
+    flex-direction: column;
+  }
+  .item .wrapper>div {
+    width: 100%;
+  }
+  .item .wrapper .itemInfo {
+    width: 65%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  .thumbs {
+    display: flex;
+    flex-direction: column;
+  }
+  .itemPhotos {
+    display: flex;
+  }
+  .itemPhotos img {
+    margin-bottom: -1.2px;
+  }
+  .item .wrapper .thumbs,
+  .thumbs div {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 649px){
+  .item .wrapper {
+    flex-direction: column;
+  }
+  .item .wrapper>div {
+    width: 100%;
+  }
+  .item .wrapper .itemInfo {
+    padding: 0;
+    text-align: center;
+  }
+  .size,
+  .color {
+    text-align: left;
+  }
+  label {
+    margin: 0;
+  }
+}

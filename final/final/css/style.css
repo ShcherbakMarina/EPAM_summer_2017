@@ -1,0 +1,938 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+
+
+button,
+img,
+/*li,*/
+.filter li,
+.model,
+a,
+label {
+  /*cursor: pointer;*/
+  /*cursor: url('../img/pointer.png'), auto;*/
+  cursor: url('../img/pointer.cur'), pointer;
+
+}
+
+.wrapper {
+  width: 100%;
+  height: inherit;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+main {
+  min-height: 100%;
+}
+
+/*HEADER*/
+header {
+  height: 119px;
+  border-bottom: 1px solid #e5e5e5;
+  overflow:  hidden;
+}
+
+.logo {
+  float: left;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0.72em 0;
+}
+
+.logoMobile {
+  display: none;
+}
+
+.signUp,
+.bag,
+.mobileMenu {
+  float: right;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  margin-top: 32px;
+  letter-spacing: 0.4px;
+}
+
+.bag {
+  width: 66px;
+  margin-left: 55px;
+  text-align: right;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.mobileMenu {
+  width: 54px;
+  height: 69px;
+  margin: 0 0 0 20px;
+  border-left: 1px solid #e5e5e5;
+  background: url('../img/menuIcon.png') no-repeat center center;
+}
+
+.bagIcon,
+.searchIcon,
+.twitterIcon {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  float: left;
+  background: url('../img/sprite.png') no-repeat;
+}
+
+.mainMenu {
+  display: flex;
+  width: 80.5%;
+  justify-content: space-between;
+  float: left;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  font-weight: 700;
+  font-size: 13px;
+  clear: both;
+}
+
+.mainMenu li {
+  display: inline-block;
+  letter-spacing: 0.2px;
+}
+
+.mainMenu a:hover {
+  color: #f14a58;
+}
+
+.search {
+  float: right;
+  width: 119px;
+  padding: 0 0 9px 0;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  border: 0;
+  border-bottom: 2px solid #e5e5e5;
+  letter-spacing: 0.2px;
+  outline: none;
+  background: url('../img/searchIcon.png') no-repeat;
+  background-position: right top;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  color: #a8a8a8;
+}
+/*HEADER END*/
+
+
+/*MAIN*/
+.slider .wrapper{
+  position: relative;
+  max-width: 100vw;
+  width: 100%;
+}
+
+.bannersSlider{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bannersSlider li:not(.activePromo) {
+  display: none;
+}
+
+/*нужно?*/
+.promo {
+  display: inline-block;
+  width: inherit;
+}
+
+.promo img {
+  margin: 0 auto;
+  border-bottom: 1px solid #dcdcdc;
+  margin-bottom: -3px;
+  /*ширина высчитывается в js*/
+}
+
+.sliderArrow {
+  position: absolute;
+  top: 38.8%;
+  width: 2.8%;
+  height: 12.8%;
+  background-color: #f14a58;
+  z-index: 1;
+}
+
+.rightArrow {
+  right: 0;
+}
+
+.leftArrowIcon,
+.rightArrowIcon {
+  display: block;
+  width: 16px;
+  height: 24px;
+  background: url('../img/arrows.png');
+  margin: 116% auto 0;
+}
+
+.rightArrowIcon {
+  background-position: -16px 0;
+}
+
+.sliderDots {
+  display: flex;
+  width: 100px;
+  height: 80px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d2d2d2;
+}
+
+.activeDot {
+  background: #f14a58;
+}
+
+.hotDeals {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotDeals .wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.leftDeal,
+.rightDealDesktop,
+.leftFooterMenu,
+.rightFooterMenu {
+  box-sizing: border-box;
+  height: inherit;
+  float: right;
+}
+
+.leftDeal,
+.leftFooterMenu {
+  float: left;
+  border-right: 1px solid #e5e5e5;
+}
+
+.leftDeal,
+.rightDealDesktop {
+  position: relative;
+  line-height: 0.15;
+}
+.leftDeal img,
+.rightDealDesktop img {
+  width: 100%;
+  margin-bottom: -2px;
+}
+
+.rightDealTablet {
+  display: none;
+}
+
+.dealText {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10% 16% 0 0;
+  text-align: center;
+  letter-spacing: 0.4px;
+  line-height: 1.15;
+}
+
+.rightDealDesktop .dealText {
+  margin-right: 8%;
+}
+
+.dealTitle {
+  display: inline-block;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 5%;
+}
+
+.dealSubtitle {
+  display: inline-block;
+  font-size: 1em;
+  font-family: Times, serif;
+  font-style: italic;
+  color: #757575;
+  letter-spacing: 0px;
+}
+
+/*new arrivals*/
+.newArrivals h2 {
+  margin: 11% 0 6.5%;
+  font-size: 3.1em;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.9px;
+}
+
+.newModels,
+.models {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 0.4px;
+}
+
+.photo {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.model:hover .overlay {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.text {
+  color: #f14a58;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 70%;
+}
+
+.model .photo{
+  margin-bottom: 17%;
+}
+
+.model .photo img {
+  width: 100%;
+  margin-bottom: -3px;
+}
+
+.model .description {
+  width: 200px;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.allArrivals,
+.showMore,
+.addToBag {
+  display: block;
+  width: 338px;
+  height: 73px;
+  margin: 6.9% auto;
+  background: transparent;
+  border: 1px solid #e5e5e5;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  line-height: 276%;
+}
+
+.allArrivals:hover,
+.showMore:hover,
+.addToBag:hover {
+  border-color: #f14a58;
+  color: #f14a58;
+}
+/*MAIN END*/
+
+
+
+
+
+
+/*FOOTER*/
+.footerMenu {
+  overflow: hidden;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  letter-spacing: 0.4px;
+}
+
+.footerMenu .wrapper {
+  display: flex;
+}
+
+.leftFooterMenu,
+.rightFooterMenu {
+  width: 50%;
+}
+
+.additionalInfo {
+  height: 80px;
+}
+
+.quickLinks,
+.customerCare,
+.questions,
+.orderByPhone {
+  float: left;
+  width: 45%;
+}
+
+.quickLinks ul,
+.customerCare ul,
+.orderByPhone .phone,
+.questions .twitter {
+  list-style: none;
+  padding-left: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin-top: 18%;
+}
+
+.quickLinks ul,
+.customerCare ul {
+  margin-bottom: 44%;
+}
+
+.quickLinks li,
+.customerCare li {
+  margin-bottom: 9%;
+}
+
+.footerMenu li a:hover {
+  text-decoration: underline;
+}
+
+.footerMenuTitle {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 20%;
+}
+
+.orderByPhone .phone,
+.questions .twitter {
+  display: block;
+  margin-top: 19px;
+}
+
+.questions {
+  margin: 0 0 12% 10%;
+}
+
+.twitterName {
+  font-weight: 700;
+}
+
+.twitterIcon {
+  background-position: -28px 0;
+  margin-right: 12px;
+}
+
+.deliveryInfo {
+  width: 52%;
+  margin-left: 10%;
+  line-height: 192%;
+  letter-spacing: 0.1px;
+  font-family: Times, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #757575;
+  clear: both;
+}
+
+.socialLinks {
+  margin: 37px 0 0 55px;
+}
+
+.socialLinks span {
+  display: inline-block;
+  float: left;
+  width: 13px;
+  height: 16px;
+  margin-top: 1px;
+  background: url('../img/sprite.png');
+  background-position: -43px 0;
+}
+
+.socialLinks .facebookLink {
+  width: 10px;
+  margin: 0 27px 0 0;
+  background-position: -56px 0;
+}
+
+.additionalInfo p {
+  display: inline-block;
+  letter-spacing: 0.4px;
+}
+
+.copyright,
+.additionalLinks a {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.additionalInfo .wrapper,
+.additionalInfo .additionalLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.additionalLinks {
+  width: 23.2%;
+}
+
+.share {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.share span {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /*для FF 1041px*/
+  .wrapper {
+    max-width: 690px;
+  }
+
+  .logo {
+    margin: 3.5% 0;
+    font-size: 1.78em;
+  }
+
+  .mainMenu {
+    width: 90.5%;
+  }
+
+  .search {
+    width: 20px;
+    border: 0;
+    color: transparent;
+  }
+
+  .search::placeholder {
+    color: transparent;
+  }
+
+  header .wrapper {
+    position: relative;
+  }
+
+  .mainMenu {
+    font-size: 12px;
+  }
+
+  .search:focus {
+    position: absolute;
+    right: 0;
+    bottom: 14px;
+    width: 250px;
+    border-bottom: 2px solid #e5e5e5;
+    background-color: #fff;
+    color: #000;
+    -webkit-box-shadow: -9px 0px 22px 10px rgba(255,255,255,1);
+    -moz-box-shadow: -9px 0px 22px 10px rgba(255,255,255,1);
+    box-shadow: -9px 0px 22px 10px rgba(255,255,255,1);
+  }
+
+
+  .search:focus::placeholder {
+    color: #a8a8a8;
+  }
+
+  .slider .wrapper {
+    /*max-width: 767px;*/
+    max-width: 100vw;
+  }
+
+  .sliderDots {
+    width: 89px;
+    height: 62px;
+  }
+
+  .rightDealDesktop {
+    display: none;
+  }
+
+  .rightDealTablet {
+    display: inline-block;
+    position: relative;
+    width: 31%;
+  }
+
+  .rightDealTablet .dealText {
+    top: auto;
+    bottom: 0;
+    margin: 0 30% 19% 0;
+  }
+
+  .rightDealTablet .dealTitle {
+    margin-bottom: 17%;
+    color: #f14a58;
+  }
+
+  .dealText {
+    margin-top: 7%;
+  }
+
+  .dealTitle {
+    font-size: 1.4em;
+  }
+
+  .newArrivals h2 {
+    font-size: 2.5em;
+  }
+
+  .model:nth-child(4) {
+    display: none;
+  }
+
+  /*HEADER*/
+  .sliderArrow {
+    display: none;
+  }
+
+  .leftDeal img {
+    width: 90%;
+    float: right;
+    margin-right: 5%;
+    margin-top: -3%;
+  }
+
+  .newArrivals h2 {
+    margin-bottom: 9.4%;
+  }
+
+  .model {
+    width: 30%;
+  }
+
+  .model .photo img {
+    /*width: 88%;*/
+  }
+
+  .deliveryInfo {
+    display: none;
+  }
+
+  .leftFooterMenu {
+    border: 0;
+  }
+
+  .allArrivals,
+  .showMore,
+  .addToBag {
+    width: 298px;
+    height: 68px;
+    font-size: 1.2em;
+    margin: 10.2% auto 20%;
+  }
+
+  .leftFooterMenu {
+    width: 66%;
+  }
+
+  .rightFooterMenu {
+    width: 34%;
+  }
+
+  .quickLinks,
+  .customerCare {
+    width: 50%;
+  }
+
+  .footerMenuTitle {
+    margin-top: 21%;
+  }
+
+  .quickLinks ul,
+  .customerCare ul {
+    margin: 19% 0 42%;
+  }
+
+  .quickLinks li,
+  .customerCare li {
+    margin-bottom: 10.7%;
+  }
+
+  .questions,
+  .orderByPhone {
+    width: 100%;
+    margin: 0 0 0 2%;
+  }
+
+  .orderByPhone .footerMenuTitle {
+    margin-top: 16%;
+  }
+
+  .socialLinks {
+    clear: both;
+    margin: 120% 0 0 0;
+  }
+
+  .additionalLinks {
+    width: 33.2%;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .slider .wrapper {
+    width: 100%;
+  }
+  .rightDealTablet {
+    width: 42%;
+  }
+  .rightDealTablet img {
+    width: 100%;
+  }
+  .search:focus {
+    bottom: 13%;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .wrapper {
+    width: 95%;
+  }
+  .search:focus {
+    bottom: 15.5%;
+  }
+  .additionalLinks a {
+    width: 60px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 649px) {
+  .wrapper {
+    max-width: 335px;
+  }
+
+  .slider .wrapper {
+    /*max-width: 375px;*/
+    width: 100vw;
+  }
+
+  .wrapper {
+    width: 80%;
+  }
+
+  header {
+    height: 70px;
+  }
+
+  header .wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .logoMobile {
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 0.85em;
+  }
+
+  .bag {
+    margin-top: 29px;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+
+  .logo,
+  .mainMenu,
+  .signUp,
+  .search {
+    display: none;
+  }
+
+  .mobileMenu:hover ~ .mainMenu {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  .mobileMenu:hover {
+    background-image: url('../img/menuIconClose.png');
+  }
+
+  .sliderDots {
+    height: 51px;
+  }
+
+  .leftDeal {
+    border: none;
+  }
+
+  .leftDeal img {
+    width: 107%;
+    margin: 0 -9% 0 0;
+  }
+
+  .dealText {
+    margin: 9% 14% 0 0;
+  }
+
+  .rightDealTablet {
+    display: none;
+  }
+
+  .newArrivals h2 {
+    font-size: 1.6em;
+    margin: 17% 0 10%;
+  }
+
+  .newModels,
+  .models {
+    font-size: 0.73em;
+  }
+
+  .model {
+    width: 47.5%;
+  }
+
+  .model .photo img {
+    width: 100%;
+  }
+
+  .model .description {
+    width: 100%;
+    line-height: 19px;
+  }
+
+  .model:nth-child(3) {
+    display: none;
+  }
+
+  .allArrivals,
+  .showMore,
+  .addToBag {
+    width: 218px;
+    height: 63px;
+    font-size: 1.1em;
+    margin: 16% auto 31%;
+  }
+
+  .footerMenu .wrapper {
+    flex-direction: column;
+  }
+
+  .leftFooterMenu, .rightFooterMenu {
+    width: 100%;
+  }
+
+  .leftFooterMenu {
+    /*border-bottom: 1px solid #e5e5e5;*/
+  }
+
+  .footerMenuTitle {
+    font-size: 0.88em;
+  }
+
+  .quickLinks, .customerCare,
+  .questions, .orderByPhone {
+    width: 44%;
+  }
+  .quickLinks {
+    margin-right: 12%;
+  }
+  .footerMenuTitle {
+    margin-top: 23%;
+  }
+  .quickLinks ul, .customerCare ul, .orderByPhone .phone, .questions .twitter {
+    font-size: 0.75em;
+  }
+  .quickLinks ul, .customerCare ul {
+    margin: 25% 0 40%;
+  }
+  .quickLinks li, .customerCare li {
+    margin-bottom: 15.7%;
+  }
+  .questions {
+    margin: 0 10% 13% 0;
+  }
+  .questions .footerMenuTitle {
+    margin-top: 16%;
+  }
+  .orderByPhone .phone, .questions .twitter {
+    margin-top: 14px;
+  }
+  .rightFooterMenu {
+    /*position: relative;*/
+  }
+  .socialLinks {
+    position: absolute;
+    /*position: relative;*/
+    margin: 136px 0 0 44%;
+  }
+  .additionalInfo {
+    height: 70px;
+    position: relative;
+    margin-top: 10%;
+    border-top: 1px solid #e5e5e5;
+  }
+  .additionalLinks {
+    position: absolute;
+    top: -80%;
+    width: 30%;
+  }
+  .copyright,
+  .additionalLinks a,
+  .share span {
+    width: auto;
+    font-size: 10px;
+  }
+  .share {
+    font-size: 15px;
+  }
+  .share span {
+    /*font-size: */
+  }
+}
