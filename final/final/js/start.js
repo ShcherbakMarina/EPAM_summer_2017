@@ -19,12 +19,16 @@ var dots = document.getElementsByClassName('sliderDots')[0];
 var leftArrow = document.getElementsByClassName('leftArrow')[0];
 var rightArrow = document.getElementsByClassName('rightArrow')[0];
 
+var timer = setInterval(moveRight, 10000);
+
+
 
 leftArrow.addEventListener('click', moveLeft);
 rightArrow.addEventListener('click', moveRight);
 
 
-var timer = setInterval(moveRight, 10000);
+
+
 // console.log(slider);
 
 // var promoBanner = document.getElementsByClassName('promo')[0];
@@ -112,8 +116,8 @@ function toggleMenu() {
   if (menuState == 'closed') {
     menuButton.style.backgroundImage = "url('img/menuIconClose.png')";
     menuState = menuButton.setAttribute('data-state', 'opened');
-    header.style.height = '270px';
-    menu.style.display = 'block';
+    header.style.height = '667px';
+    menu.style.display = 'flex';
   } else if (menuState == 'opened') {
     menuButton.style.backgroundImage = "url('img/menuIcon.png')";
     menuState = menuButton.setAttribute('data-state', 'closed');

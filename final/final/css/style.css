@@ -17,7 +17,8 @@ img,
 .filter li,
 .model,
 a,
-label {
+label,
+.mobileMenu {
   /*cursor: pointer;*/
   /*cursor: url('../img/pointer.png'), auto;*/
   cursor: url('../img/pointer.cur'), pointer;
@@ -807,6 +808,19 @@ header {
 
   .mobileMenu:hover {
     /*background-image: url('../img/menuIconClose.png');*/
+  }
+
+  .mainMenu {
+    min-width: 335px;
+    width: 90%;
+    padding: 0 5%;
+    flex-direction: column;
+    border-top: 1px solid #e5e5e5;
+    font-size: 24px;
+  }
+
+  .mainMenu li {
+    margin: 9.7% 0 0 0;
   }
 
   .sliderDots {
