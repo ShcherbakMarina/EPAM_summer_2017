@@ -1,6 +1,5 @@
 var addToBagButton = document.getElementsByClassName('addToBag')[0];
 
-
 addToBagButton.addEventListener('click', addToBag);
 
 function addToBag() {

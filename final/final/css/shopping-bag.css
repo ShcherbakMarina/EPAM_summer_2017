@@ -3,3 +3,54 @@
   padding-left: 30px;
   margin: 0;
 }
+
+.bagContent .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.model {
+  display: wrap;
+  width: 50%;
+}
+
+.photo,
+.info {
+  display: inline-block;
+  float: left;
+}
+
+.info {
+  width: 50%;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: auto;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.color,
+.size,
+.quantity {
+  font-size: 12px;
+}
+
+.removeItem {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.removeItem:hover {
+  color: #f14a58;
+}

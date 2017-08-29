@@ -18,7 +18,8 @@ img,
 .model,
 a,
 label,
-.mobileMenu {
+.mobileMenu,
+.bag {
   /*cursor: pointer;*/
   /*cursor: url('../img/pointer.png'), auto;*/
   cursor: url('../img/pointer.cur'), pointer;

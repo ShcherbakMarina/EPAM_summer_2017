@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/item.css">
-    <link rel="stylesheet" href="css/shopping-bag.css">
-    <title>Shopping bag</title>
+    <link rel="stylesheet" href="css/itemFromCatalog.css">
+    <title>Item from catalog page</title>
   </head>
   <body>
     <header>
       <div class="wrapper">
         <h1 class="logo"><a href="start.html">Template</a></h1>
         <h1 class="logoMobile"><a href="start.html">TL</a></h1>
-        <div class="mobileMenu" data-state="closed" onclick="toggleMenu();"></div>
+        <div class="mobileMenu"></div>
         <p class="bag"><span class="bagIcon"></span>Bag (0)</p>
         <p class="signUp">E-mail sign up</p>
         <ul class="mainMenu">
@@ -33,14 +33,45 @@
       </div>
     </header>
     <main>
-      <div class="shoppingBag">
+      <div class="backToCatalog">
         <div class="wrapper">
-          <p>Shopping bag</p>
+          <a href="catalog.html">Back to catalog</a>
         </div>
       </div>
-      <div class="bagContent">
+      <div class="item">
         <div class="wrapper">
+          <div class="itemPhotos">
+            <div class="fullImg">
+              <!-- <img src="img/item/itemFull.jpg"> -->
+              <img src="">
+            </div>
+          </div>
+          <div class="itemInfo">
+            <p class="name"></p>
+            <p class="description">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs</p>
+            <p class="price">£</p>
+            <p class="size"><span>Size:</span>
+              <input type="radio" value="42" name="size" id="size1" checked>
+              <label for="size1">UK 42</label>
 
+              <input type="radio" value="44" name="size"  id="size2">
+              <label for="size2">UK 44</label>
+
+              <input type="radio" value="46" name="size"  id="size3">
+              <label for="size3">UK 46</label>
+
+              <input type="radio" value="48" name="size"  id="size4">
+              <label for="size4">UK 48</label>
+            </p>
+            <p class="color"><span>Color:</span>
+              <input type="radio" value="Black" name="color" id="color1" checked>
+              <label for="color1">Black</label>
+
+              <input type="radio" value="Blue" name="color"  id="color2">
+              <label for="color2">Blue</label>
+            </p>
+            <button class="addToBag">Add to bag</button>
+          </div>
         </div>
       </div>
     </main>
@@ -101,7 +132,7 @@
         </div>
       </div>
     </footer>
-    <script src="js/shopping-bag.js"></script>
+    <script src="js/itemFromCatalog.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

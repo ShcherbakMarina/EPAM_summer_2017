@@ -8,6 +8,8 @@ var screenWidth = window.innerWidth;
 var promo = document.getElementsByClassName('promo');
 var promoBanners = [];
 
+
+
 for (var i = 0; i < promo.length; i++) {
   promoBanners[i] = promo[i].children[0].children[0];
 }
