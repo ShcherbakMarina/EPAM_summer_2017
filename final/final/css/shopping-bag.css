@@ -10,7 +10,7 @@
 }
 
 .model {
-  display: wrap;
+  display: flex;
   width: 50%;
 }
 
@@ -22,6 +22,7 @@
 
 .info {
   width: 50%;
+  margin-left: 25px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -49,8 +50,43 @@ img {
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
+  color: #f14a58;
 }
 
-.removeItem:hover {
+.emptyBagMsg,
+.afterPurchaseMsg {
+  margin: auto;
+}
+
+.emptyBagMsg a {
   color: #f14a58;
+  font-weight: 700;
+}
+
+.controlButtons {
+  display: none;
+  border-top: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+
+.controlButtons .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.emptyBagButton {
+  background: transparent;
+  border: none;
+}
+
+.buyNow {
+  margin: 6% auto;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .bagContent .model {
+    display: flex;
+  }
 }

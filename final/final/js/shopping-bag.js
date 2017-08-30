@@ -2,6 +2,23 @@ var bag = JSON.parse(localStorage.getItem('bag'));
 
 var d = document;
 var wrapper = d.querySelector('.bagContent .wrapper');
+var controlBtns = d.querySelector('.controlButtons');
+var emptyBagBtn = d.querySelector('.emptyBagButton');
+var buyNow = d.querySelector('.buyNow');
+// var main = d.querySelector('main');
+// var controlBtns = d.createElement('div');
+// controlBtns.classList.add('controlButtons');
+// var innerWrapper = d.createElement('div');
+// innerWrapper.classList.add('wrapper');
+// var emptyBagBtn = d.createElement('button');
+// emptyBagBtn.classList.add('emptyBagButton');
+// var buyNow = d.createElement('bu')
+
+if (!bag) {
+  addEmptyBagMsg();
+} else {
+  controlBtns.style.display = 'block';
+}
 
 for (var key in bag) {
   if (key == 'sum' || key == 'totalAmount') continue;
@@ -44,6 +61,31 @@ for (var key in bag) {
   info.appendChild(removeItem);
 }
 
+emptyBagBtn.addEventListener('click', function() {
+  localStorage.removeItem('bag');
+  bagElement.innerHTML = '<span class="bagIcon"></span>Bag (0)';
+
+  while(wrapper.children[0]) {
+    wrapper.removeChild(wrapper.children[0]);
+  };
+
+  addEmptyBagMsg();
+  controlBtns.style.display = 'none';
+});
+
+
+buyNow.addEventListener('click', function() {
+  localStorage.removeItem('bag');
+  bagElement.innerHTML = '<span class="bagIcon"></span>Bag (0)';
+
+  while(wrapper.children[0]) {
+    wrapper.removeChild(wrapper.children[0]);
+  };
+
+  addPurchaseMsg();
+  controlBtns.style.display = 'none';
+});
+
 
 function remove() {
   var model = this.parentElement.parentElement;
@@ -61,14 +103,35 @@ function remove() {
     delete bag[itemId];
     wrapper.removeChild(model);
   }
-  bag['sum'] -= +price;
-  bag['totalAmount'] -= 1;
 
-  if (bag['totalAmount'] == 0) {
-    bagElement.innerHTML = '<span class="bagIcon"></span>Bag (0)';
-  } else { 
-    bagElement.innerHTML = '<span class="bagIcon"></span>Bag £' + bag['sum'] + ' (' + bag['totalAmount'] + ')';
+  if (bag['totalAmount'] == 1) {
+    localStorage.removeItem('bag');
+  } else {
+    bag['sum'] -= +price;
+    bag['totalAmount'] -= 1;
   }
 
-  localStorage.setItem('bag', JSON.stringify(bag));
+  if (!localStorage.getItem('bag')) {
+    bagElement.innerHTML = '<span class="bagIcon"></span>Bag (0)';
+    addEmptyBagMsg();
+    controlBtns.style.display = 'none';
+  } else {
+    bagElement.innerHTML = '<span class="bagIcon"></span>Bag £' + bag['sum'] + ' (' + bag['totalAmount'] + ')';
+    localStorage.setItem('bag', JSON.stringify(bag));
+  }
+}
+
+
+function addEmptyBagMsg() {
+  var p = d.createElement('p');
+  p.classList.add('emptyBagMsg');
+  p.innerHTML = 'Your shopping bag is empty. Use <a href="catalog.html">Catalog</a> to add new items.';
+  wrapper.appendChild(p);
+}
+
+function addPurchaseMsg() {
+  var p = d.createElement('p');
+  p.classList.add('afterPurchaseMsg');
+  p.innerHTML = 'Thank you for your purchase.';
+  wrapper.appendChild(p);
 }

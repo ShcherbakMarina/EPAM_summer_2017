@@ -355,7 +355,8 @@ header {
 
 .allArrivals,
 .showMore,
-.addToBag {
+.addToBag,
+.buyNow {
   display: block;
   width: 338px;
   height: 73px;
@@ -370,7 +371,8 @@ header {
 
 .allArrivals:hover,
 .showMore:hover,
-.addToBag:hover {
+.addToBag:hover,
+.buyNow:hover {
   border-color: #f14a58;
   color: #f14a58;
 }
