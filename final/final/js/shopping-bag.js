@@ -4,7 +4,7 @@ var d = document;
 var wrapper = d.querySelector('.bagContent .wrapper');
 
 for (var key in bag) {
-  if (key == 'sum') continue;
+  if (key == 'sum' || key == 'totalAmount') continue;
   var model = d.createElement('div');
   model.classList.add('model');
   var photo = d.createElement('div');
@@ -62,6 +62,13 @@ function remove() {
     wrapper.removeChild(model);
   }
   bag['sum'] -= +price;
-  bagElement.innerHTML = '<span class="bagIcon"></span>Bag £' + bag['sum'];
+  bag['totalAmount'] -= 1;
+
+  if (bag['totalAmount'] == 0) {
+    bagElement.innerHTML = '<span class="bagIcon"></span>Bag (0)';
+  } else { 
+    bagElement.innerHTML = '<span class="bagIcon"></span>Bag £' + bag['sum'] + ' (' + bag['totalAmount'] + ')';
+  }
+
   localStorage.setItem('bag', JSON.stringify(bag));
 }

@@ -27,15 +27,22 @@ function addToBag() {
   var itemId = itemName + '' + itemSize + '' + itemColor;
   var itemPrice = item.querySelector('.price').innerHTML.substring(1);
   var itemAmount = 1;
+  var totalAmount = 1;
 
 
   if (bag.hasOwnProperty('sum')) {
     bag['sum'] += +itemPrice;
+    bag['totalAmount'] += totalAmount;
   } else {
     bag['sum'] = +itemPrice;
+    bag['totalAmount'] = totalAmount;
   }
 
-  bagElement.innerHTML = '<span class="bagIcon"></span>Bag £' + bag['sum'];
+  console.log(bag['sum']);
+  bag['sum'] = +bag['sum'].toFixed(2);
+  console.log(bag['sum']);
+
+  bagElement.innerHTML = '<span class="bagIcon"></span>Bag £' + bag['sum'] + ' (' + bag['totalAmount'] + ')';
 
   if (bag.hasOwnProperty(itemId) && bag[itemId][2] == itemSize && bag[itemId][3] == itemColor) {
   	bag[itemId][4].amount += 1;
